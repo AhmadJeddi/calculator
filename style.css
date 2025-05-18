@@ -1,0 +1,117 @@
+/* Reset all margins and paddings, and set box-sizing to border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles to center the calculator vertically and horizontally */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4ebf5;
+  font-family: Arial, sans-serif;
+}
+
+/* Main calculator container */
+.calculator {
+  width: 340px;
+  background-color: #e4ebf5;
+  /* Neumorphism shadow */
+  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.3rem -0.3rem 0.6rem #fff;
+  border-radius: 10px;
+  padding: 40px 20px;
+  user-select: none; /* Disable text selection */
+  text-align: center;
+}
+
+/* Display area container */
+.display {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Previous answer display styling */
+.display-ans {
+  width: 100%;
+  height: 20px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  color: #555;
+  margin-bottom: 8px;
+  pointer-events: none; /* Prevent user interaction */
+}
+
+/* Main result display styling */
+.display-main {
+  width: 100%;
+  height: 90px;
+  font-size: 40px;
+  border: none;
+  background-color: transparent;
+  box-shadow: inset 0.3rem 0.3rem 0.6rem #c8d0e7,
+    inset -0.3rem -0.3rem 0.6rem #fff;
+  border-radius: 10px;
+  text-align: right;
+  padding-right: 10px;
+  pointer-events: none; /* Prevent user interaction */
+}
+
+/* Container for buttons using CSS Grid layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  justify-items: center;
+}
+
+/* Base styles for all buttons */
+.btn {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e4ebf5;
+  /* Neumorphism shadow */
+  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.3rem -0.3rem 0.6rem #fff;
+  color: #696969;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  background-color: #dde4ec;
+}
+
+/* Active effect for buttons (on click) */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Styles for red buttons (AC and C) */
+.red {
+  background-color: #ff4a4a;
+  color: #e4ebf5;
+}
+
+/* Hover effect for red buttons */
+.red:hover {
+  background-color: rgb(231, 83, 83);
+}
+
+/* Styles for orange operator buttons */
+.orange {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+/* Hover effect for orange buttons */
+.orange:hover {
+  background-color: rgb(226, 179, 90);
+}
